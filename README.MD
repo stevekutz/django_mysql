@@ -3,7 +3,7 @@ Django using MySQL
 
 #### Project setup
 
-- Launch VS Code adn then open terminal window
+- Launch VS Code and then open terminal window
 
 1) Set up virtual environment
 
@@ -83,4 +83,26 @@ python manage.py runserver
         name = models.TextField(max_length = 40)
         stud_class = models.TextField()
         department = models.TextField()
+    ~~~
+
+#### Setup MySQL database
+
+1) Install myselclient from the command line
+
+2) Replace the `DATABASES` dict with thge following:
+
+    ~~~ py
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'dataflair',
+            'USER': 'root',
+            'PASSWORD': '',
+            'HOST': '',
+            'PORT': '',
+            'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+            }    
+        }
+    }
     ~~~
