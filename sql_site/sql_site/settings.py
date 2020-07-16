@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'settings',
+    'student',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -74,30 +74,29 @@ WSGI_APPLICATION = 'sql_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
+# this is Django's default setup for SQLite
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dataflair',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
-        'OPTIONS': {
-        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }    
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'dbstudent',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': '',
+#         'PORT': '',
+#         'OPTIONS': {
+#         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+#         }    
+#     }
+# }
 
-
-}
+# sql_site/sql_site/settings.py
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

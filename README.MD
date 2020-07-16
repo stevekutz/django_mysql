@@ -89,13 +89,13 @@ python manage.py runserver
 
 1) Install myselclient from the command line
 
-2) Replace the `DATABASES` dict with thge following:
+2) Replace the `DATABASES` dict with the following:
 
     ~~~ py
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'dataflair',
+            'NAME': 'dbstudent',
             'USER': 'root',
             'PASSWORD': '',
             'HOST': '',
@@ -105,4 +105,17 @@ python manage.py runserver
             }    
         }
     }
+    ~~~
+3) Add `students` to INSTALLED_APPS section of `settings.py`
+
+    ~~~ py
+    INSTALLED_APPS = [
+        'student',
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
+    ]
     ~~~
