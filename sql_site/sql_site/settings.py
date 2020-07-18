@@ -74,27 +74,27 @@ WSGI_APPLICATION = 'sql_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# this is Django's default setup for SQLite
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
+# # this is Django's default setup for SQLite
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'dbstudent',
-#         'USER': 'root',
-#         'PASSWORD': '',
-#         'HOST': '',
-#         'PORT': '',
-#         'OPTIONS': {
-#         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-#         }    
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'dbstudent',
+        'USER': 'root',
+        'PASSWORD': 'rootyPro99',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        # 'OPTIONS': {
+        # 'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        # }    
+    }
+}
 
 # sql_site/sql_site/settings.py
 

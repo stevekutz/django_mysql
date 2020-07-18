@@ -87,7 +87,7 @@ python manage.py runserver
 
 #### Setup MySQL database
 
-1) Install myselclient from the command line
+1) Install mysqlclient from the command line
 
 2) Replace the `DATABASES` dict with the following:
 
@@ -119,3 +119,21 @@ python manage.py runserver
         'django.contrib.staticfiles',
     ]
     ~~~
+
+4) Install MySQL and optionally MySQL Workbench and create the `dbstudent` database under your root user
+
+5) Install mysqlclient vi pip let Django communicate with the MySQL server
+
+    ~~~ bash
+    pip install mysqlclient
+    ~~~
+
+6) Run the first migration
+    
+    ~~~ bash
+    python manage.py makemigrations
+    python manage.py migrate
+    ~~~
+
+7) Check MySQL to verify that the table is added  
+   - Note that MySQL will fully rewrite tables for almost every schema operation and generally takes a time proportional to the number of rows in the table to add or remove columns  
